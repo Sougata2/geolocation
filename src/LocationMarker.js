@@ -23,8 +23,9 @@ function LocationMarker() {
             lng: position.coords.longitude,
           });
         });
+        map.getCenter(position);
       }
-    }, 2000);
+    }, 3000);
     return () => {
       clearInterval(interval);
     };
